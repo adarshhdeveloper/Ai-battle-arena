@@ -22,6 +22,7 @@ app.post("/invoke", async (req, res) => {
 
     const { input } = req.body
     const result = await runGraph(input)
+
     res.status(200).json({
         message: "Graph executed successfully",
         success: true,
@@ -29,5 +30,7 @@ app.post("/invoke", async (req, res) => {
     })
 
 })
+
+
 
 export default app;
